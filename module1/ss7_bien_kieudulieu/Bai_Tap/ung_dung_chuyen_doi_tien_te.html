@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển tiền</title>
+    <style>
+        table{
+            background-color: orange;
+        }
+        h1{
+            background-color: blue;
+        }
+        body {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+<h1> Chuyển Tiền</h1>
+
+<table cellspacing="0"cellpadding="10">
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="Tien"></td>
+        <td><select id="from">
+            <option value="usd">USD</option>
+            <option value="vnd">VND</option>
+        </select></td>
+        <td><select id="to">
+            <option value="usd">USD</option>
+            <option value="vnd">VND</option>
+        </select></td>
+        <td><button type="button" onclick="doi()">Convert</button> </td>
+    </tr>
+</table>
+<p id="ketqua">Result</p>
+<script>
+    function doi() {
+       let T = document.getElementById('Tien').value;
+       let From=document.getElementById('from').value;
+       let To=document.getElementById('to').value;
+       let result;
+       if (From=="usd" && To=="vnd"){
+           result = T*23000
+       }else if(From=="vnd" && To=="usd") {
+            result = T/23000
+       }else if (From=="vnd" && To=="vnd")
+       {result = T}
+       else if(result=T) {
+       }   document.getElementById("ketqua").innerHTML = result;
+    }
+</script>
+</body>
+</html>

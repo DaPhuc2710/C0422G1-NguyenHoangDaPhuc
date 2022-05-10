@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<b>Vật Lý</b>
+<input type="text" id="vatly"><br>
+<b>Hóa học</b>
+<input type="text" id="hoahoc"><br>
+<b>Sinh học</b>
+<input type="text" id="sinhhoc"><br>
+<p id="result">0</p>
+<p id="result1">0</p>
+<button type="button" onclick="tong()">sum</button>
+<script>
+    function tong() {
+        let a = document.getElementById("vatly").value;
+        let b = document.getElementById('hoahoc').value;
+        let c = document.getElementById('sinhhoc').value;
+        let sum = a+b+c;
+        let trungbinh = (a+b+c)/3;
+        document.getElementById('result').innerHTML = sum;
+        document.getElementById('result1').innerHTML =trungbinh;
+    }
+</script>
+
+</body>
+</html>

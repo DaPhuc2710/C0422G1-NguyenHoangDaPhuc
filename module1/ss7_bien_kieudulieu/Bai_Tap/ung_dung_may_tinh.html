@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng máy tính</title>
+</head>
+<h1>Caculator</h1>
+<body>
+<table border="1" cellspacing="0" cellpadding="1">
+    <tr>
+        <th><input type="text" id="A"></th>
+        <th><input type="text" id="B"></th>
+    </tr>
+</table>
+<p> <button type="button" onclick="cong()" >Addition(+)</button>
+    <button type="button" onclick="tru()" >Subtraction(-)</button>
+    <button type="button"onclick="nhan()" >Multiplication(x)</button>
+    <button type="button" onclick="chia()" >Division(/)</button>
+</p>
+<p>Kết Qủa</p>
+<p id="result"></p>
+<p id="result1"></p>
+<p id="result2"></p>
+<p id="result3"></p>
+<script>
+    function cong() {
+        let a=document.getElementById('A').value;
+        let b=document.getElementById('B').value;
+       let  ketqua=parseInt(a)+parseInt(b);
+        document.getElementById('result').innerHTML =ketqua;
+
+    }
+    function tru() {
+        let a=document.getElementById('A').value;
+        let b=document.getElementById('B').value;
+        let  ketqua=parseInt(a)-parseInt(b);
+        document.getElementById('result1').innerHTML =ketqua;
+
+    }
+    function nhan() {
+        let a=document.getElementById('A').value;
+        let b=document.getElementById('B').value;
+        let  ketqua=parseInt(a)*parseInt(b);
+        document.getElementById('result2').innerHTML =ketqua;
+
+    }
+    function chia() {
+        let a=document.getElementById('A').value;
+        let b=document.getElementById('B').value;
+        let  ketqua=parseInt(a)/parseInt(b);
+        document.getElementById('result3').innerHTML =ketqua;
+
+    }
+
+</script>
+
+
+
+</body>
+</html>

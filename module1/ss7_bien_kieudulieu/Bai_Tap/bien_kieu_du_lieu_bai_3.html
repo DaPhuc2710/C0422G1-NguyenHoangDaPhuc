@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<b>Bán kính</b>
+<input type="text" id="bankinh"><br>
+<p id="ketqua">kết quả diện tích hình tròn</p>
+<button type="button" onclick="tinhtoan()">tính toán</button>
+<script>
+    function tinhtoan() {
+        let r=document.getElementById('bankinh').value;
+        let result=r*r*3.14;
+        document.getElementById('ketqua').innerHTML =result;
+
+
+    }
+</script>
+
+
+
+</body>
+</html>
