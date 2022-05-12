@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select id="Đơn giá">
+    <option>Trên 25000kwh</option>
+    <option>25000kwh</option>
+    <option>Dưới 25000kwh</option>
+</select>
+<p >Nhâp số giờ đã dùng</p>
+<p><input type="text" id="h"><button type="button" onclick="nut()"> bấm</button></p>
+<p id="result">Kết Qủa</p>
+<script>
+    function nut() {
+        let a=document.getElementById('Đơn giá').value;
+        let b= document.getElementById('h').value;
+        let tiendien;
+        let cuoc;
+        switch (a) {
+            case "Trên 25000kwh":cuoc=3500;break;
+            case "25000kwh":cuoc=2500;break;
+            case "Dưới 25000kwh":cuoc=2000;break;
+        }
+        tiendien =cuoc*b
+        document.getElementById('result').innerHTML ='cước tiền là' +tiendien
+    }
+</script>
+
+</body>
+</html>

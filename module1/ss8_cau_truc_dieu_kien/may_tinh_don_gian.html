@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+    <style>
+        button{
+            width: 100%;
+        }
+        table{
+            background-color: orange;
+            border:  solid black ;
+            margin-left: 500px;
+
+        }
+
+    </style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="10" >
+<tr><th colspan="4"><input type="text" id="manhinh" /></th></tr>
+<tr>
+    <td><button style="color: blue" type="button" name="so" value="1" onclick="nhapvao(value)">1</button></td>
+    <td><button style="color: blue" type="button" name="so" value="2"  onclick="nhapvao(value)">2</button></td>
+    <td><button style="color: blue" type="button" name="so" value="3" onclick="nhapvao(value)">3</button></td>
+    <td><button style="color: blue" type="button"  value="+" name="OP" onclick="nhapvao(value)">+</button></td>
+
+</tr>
+<tr>
+    <td><button style="color: blue" type="button" name="so" value="4"  onclick="nhapvao(value)">4</button></td>
+    <td><button style="color: blue" type="button" name="so"  value="5" onclick="nhapvao(value)">5</button></td>
+    <td><button  style="color: blue" type="button" name="so"  value="6" onclick="nhapvao(value)">6</button></td>
+    <td><button style="color: blue" type="button" value="-" name="OP" onclick="nhapvao(value)">-</button></td>
+
+</tr>
+<tr>
+    <td><button style="color: blue" type="button" value="7"  name="so" onclick="nhapvao(value)">7</button></td>
+    <td><button style="color: blue" type="button"  value="8" name="so" onclick="nhapvao(value)">8</button></td>
+    <td><button style="color: blue" type="button"   value="9" name="so" onclick="nhapvao(value)">9</button></td>
+    <td><button style="color: blue" type="button"  value="*" name="OP"onclick="nhapvao(value)">X</button></td>
+
+</tr>
+<tr>
+    <td><button style="color: blue" type="button" value="C"  onclick="xoa()">C</button></td>
+    <td><button style="color: blue" type="button"  value="0" name="so" onclick="nhapvao(value)">0</button></td>
+    <td><button style="color: blue" type="button"  value="=" name="result" onclick=" result()">=</button></td>
+    <td><button style="color: blue" type="button"  value="/" name="OP" onclick="nhapvao(value)">/</button></td>
+
+</tr>
+</table>
+<script>
+    let view = document.getElementById("manhinh");
+    function nhapvao(value) {
+        view.value += value;
+    }
+    function result() {
+        let result = eval(view.value);
+        view.value = result;
+    }
+    function xoa() {
+        view.value="";
+    }
+
+</script>
+</body>
+</html>

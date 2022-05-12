@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select id="thang">
+    <option>1_thang</option>
+    <option>3_thang</option>
+    <option>6_thang</option>
+    <option>12_thang</option>
+    <option>18_thang</option>
+    <option>tren_18_thang </option>
+</select>
+<p>Số tiền nợ</p>
+<p><input type="text" id="tien"><button type="button" onclick="nhamvao()">Nhấp vào</button></p>
+<p id="result">kết quả là </p>
+<script>
+    function nhamvao() {
+        let a= document.getElementById('thang').value;
+        let b= document.getElementById('tien').value;
+        let laisuat;
+        let sotien;
+        switch (a) {
+            case 1_thang: laisuat=1.2;
+            break;
+            case 3_thang: laisuat=1.5;
+            break;
+            case 6_thang: laisuat=2.0;
+            break;
+            case 12_thang: laisuat=2.5;
+            break;
+            case 18_thang: laisuat=2.8;
+            break;
+            case  tren_18_thang: laisuat=3.0;
+            break;
+        }
+sotien=laisuat*b;
+        document.getElementById('result').innerHTML = 'số tiền cần trả là'  +sotien;
+    }
+</script>
+
+
+</body>
+</html>

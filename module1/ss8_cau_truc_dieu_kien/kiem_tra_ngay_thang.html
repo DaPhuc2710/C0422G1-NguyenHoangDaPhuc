@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Kiểm tra số ngày trong tháng</h1>
+<p><input max="12" min="1" type="text" id="thang"  style="width: 150px"> <button type="button" onclick="nut()" >Check</button></p>
+<p id="kq">Đây là chỗ hiển thị kết quả</p>
+<script>
+    function nut() {
+        let a = parseInt(document.getElementById('thang').value);
+        switch(a) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:document.getElementById('kq').innerHTML='thang ' + a +'  có 31 ngày';
+            break;
+            case 4:
+            case 6:
+            case 9:
+            case 11: document.getElementById('kq').innerHTML='thang ' + a +'  có 30 ngày';
+            break;
+
+            case 2:
+                document.getElementById('kq').innerHTML='thang ' + a +'  có 28 hoặc 29 ngày';
+                break;
+
+            default:document.getElementById('kq').innerHTML='nhập sai';
+        }
+    }
+</script>
+
+
+</body>
+</html>
