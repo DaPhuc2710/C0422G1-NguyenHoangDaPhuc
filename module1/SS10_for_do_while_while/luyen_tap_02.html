@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // bai 1
+    // let n1 = 0, n2 = 1, nextTerm;
+    // let sum=0
+    // for (let i = 1; i < 1000; i++) {
+    //     nextTerm = n1 + n2;
+    //     n1 = n2;
+    //     n2 = nextTerm;
+    //     sum=sum+nextTerm;
+    // }
+    // document.write(sum)
+
+    // bai 2
+    // let a;
+    // let kq=1;
+    // let num=parseInt(prompt('nhập số'));
+    // for (a=num;a>0;a--){
+    //     kq=kq*a
+    // }document.write(kq)
+
+
+
+    // bài 3
+    // let number = ""
+    // for (i = 1; i <= 5; i++) {
+    //     number += "*"
+    //     document.write(number + "<br>")
+    // }
+    //
+    // for (i = 5; i >= 1; i--) {
+    //     for (j = i; j > 1; j--) {
+    //         document.write("*")
+    //     }
+    //     document.write("*" + "<br>")
+    // }
+    //
+    //
+    // let triangle = '';
+    // let star = '';
+    // let space = '&nbsp&nbsp';
+    // for (i = 1; i < 5; i++) {
+    //     for (j = 1; j < 5 - i; j++) {
+    //         triangle += space;
+    //     }
+    //     star += '*';
+    //     triangle = triangle + star
+    //     document.write(triangle + '<br>')
+    //     triangle = ''
+    // }document.write('<br>')
+    //
+    //
+    //
+    // let triangle = '';
+    // let star = '*';
+    // let space = '';
+    // for (i = 0; i<5; i++) {
+    //     for (j = 0;  j< 5 - i; j++) {
+    //         triangle += star ;
+    //     }
+    //
+    //     triangle =  space + triangle;
+    //     space +='&nbsp&nbsp';
+    //     document.write(triangle + '<br>')
+    //     triangle = ''
+    // }
+
+    for (i=1;i<=7;i++){
+        for (j=1;j<=21;j++){
+               b='*'
+            if (j==1 || i==1||i==7||j==21){
+                document.write('*')
+            }else{
+                document.write('&nbsp&nbsp')
+            }
+        }document.write('<br>')
+    }
+
+
+
+</script>
+
+</body>
+</html>

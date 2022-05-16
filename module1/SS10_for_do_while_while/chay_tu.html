@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let kq = 0;
+    //
+    // document.write("truoc for<br>") ;
+    // for (let i = 1; i <= 9; i++) {
+    //     //document.write(i +"<br>") ;
+    //
+    //     for (let j = 1; j <= 10; j++) {
+    //         kq = i * j;
+    //         document.write("ket qua " +i +" x " + j +" la :" +kq+ "<br>") ;
+    //     }
+    // }
+    // document.write("sau for<br>") ;
+    /*for (let a=1; a<100;a= a+2)
+      {
+      document.write(a +'<br>')
+      }
+      */
+    /*let kq=0
+    for (let a=1;a<=50;a=a+1)
+    {
+        kq=0;
+        for (i = a-1;i>=0;i--){
+           kq= kq+i;
+
+        }
+        document.write(a + '=' +  kq +'<br>');
+    }*/
+    // let n1 = 0, n2 = 1, nextTerm;
+    // let sum=0;
+    // for (let i = 1; i <= 20; i++) {
+    //     nextTerm = n1 + n2;
+    //     n1 = n2;
+    //     n2 = nextTerm;
+    //     sum+=nextTerm;
+    // }
+    //
+    // document.write(nextTerm)
+    let n1 = 0, n2 = 1, nextTerm;
+    let sum=0
+    for (let i = 1; i < 20;i++) {
+        nextTerm = n1 + n2;
+        n1 = n2;
+        n2 = nextTerm;
+        sum=sum+nextTerm;
+    }
+    document.write(sum)
+</script>
+
+</body>
+</html>
