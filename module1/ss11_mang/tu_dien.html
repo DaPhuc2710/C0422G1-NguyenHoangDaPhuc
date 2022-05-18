@@ -5,32 +5,38 @@
     <title>Title</title>
 </head>
 <body>
-<p> Nhập từ:
-    <input type="text" id="string">
-    <input type="button" id="but" value="Dịch" onclick="but1()">
-</p>
-<p id="result"> Result</p>
+
+<label for="string">Nhập từ: </label>
+<input type="text" name="" id="string">
+<button onclick="transcript()">Dịch</button>
+<p id="result"></p>
 <script>
-    let dicnary = ['Thịt', 'Cá', 'Người'];
-    let tudien = ['Meat', 'Fish', 'Human'];
-    let string = document.getElementById("string").value;
-    let index_dic =0;
-    let result=''
-    function but1() {
-
-        for (i = 0; i < dicnary.length; i++) {
-            if (string==dicnary[i]){
-                index_dic=i;
-                for (j = 0; j < tudien.length; j++)
-                    if (index_dic==j){
-                        result=tudien[j];
+    function transcript() {
+        let string = document.getElementById("string").value;
+        let array1 =[ "go", "school", "get"];
+        let array2 =[ "di", "truong", "nhan"];
+        let index_eng = 0;
+        let result = "";
+        for (let i = 0; i < array1.length; i++)
+        {
+            if (string == array1[i])
+            {
+                index_eng = i; //2
+                for (let j = 0; j < array2.length; j++)
+                {
+                    if (index_eng == j)
+                    { //2 == 2
+                        result = array2[j]; // táo
                     }
+                }
             }
-
         }
-        document.getElementById('result').innerHTML = result
+        document.getElementById("result").innerHTML = result;
+
     }
 </script>
+</body>
+</html>
 
 </body>
 </html>
