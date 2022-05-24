@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class myRectangle{
+        constructor(height,width) {
+            this.height=height;
+            this.width=width;
+            this.getHeight=function () {
+                return this.height;
+            }
+            this.getWidth=function () {
+                return this.width
+            }
+            this.getArea=function () {
+                return (this.height+this.width)*2;
+            }
+            this.getCircum=function () {
+                return this.height+this.width;
+
+            }
+
+        }
+    }
+    let retangle= new myRectangle(10,5)
+    let height=retangle.getHeight();
+    let width=retangle.getWidth();
+    let area=retangle.getArea();
+    let circum=retangle.getCircum()
+    document.write('dien tich la:'+area+'<br>')
+    document.write('chu vi la:'+circum)
+
+</script>
+
+</body>
+</html>

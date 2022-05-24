@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let myDate=function (day,month,year) {// this tại đây nghĩa là myDate(chỉ viết gọn lại thôi)
+        this.day=day; //các giá trị this.day là của myDate, còn day sau dấu = nghĩa là cái day tham số khi người dùng nhập vào
+        this.month=month;
+        this.year=year;
+        this.getDay=function () {
+            return this.day;// trả lại giá trị day mà mình nhập vào
+        }
+        this.getMonth=function () {
+            return this.month;
+        }
+        this.getYear=function () {
+            return this.year;
+        }
+        this.setDay = function(newDay) {
+            this.day  = newDay;
+
+        }
+    }
+
+</script>
+</body>
+</html>

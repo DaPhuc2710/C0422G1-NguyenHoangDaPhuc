@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(Ctemp) {
+            this.Ctemp=Ctemp;
+            this.getCtemp=function () {
+                return this.Ctemp;
+            }
+            this.getKtemp=function () {
+                return this.Ctemp+273.15;
+            }
+            this.getFtemp=function () {
+                return this.Ctemp*1.8+32;
+            }
+
+        }
+    }
+    let temperature= new Temperature(25);
+    let Ctemp=temp_24_05e.getCtemp();
+    let Ktemp=temp_24_05e.getKtemp();
+    let Ftemp=temp_24_05e.getFtemp();
+    document.write('do C la:'+Ctemp+'<br>')
+    document.write('do K la:'+Ktemp+'<br>')
+    document.write('do F la:'+Ftemp+'<br>')
+
+</script>
+
+</body>
+</html>
