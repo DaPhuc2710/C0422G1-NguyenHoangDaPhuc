@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Battery {
+        constructor(energy) {
+            this.energy = energy
+        };
+
+        setEnergy(energy) { //set luôn luôn có giá trị truyền vào
+            this.energy = energy   // dùng set thì sẽ k có return
+        }
+
+        getEnergy() {
+            return this.energy
+        }
+        decreaseEnergy() {
+            if (this.energy > 0)
+                return this.energy--;
+        }
+    }
+
+
+    class flashLamp {
+        constructor() {// battery này là object của class battery chứ k phải là tham số
+            // chỗ này cũng đã lượt bỏ bước this.battery và this.status để tránh gay nhần lẫn
+        }
+
+        setBattery(battery) {
+            this.battery = battery;
+        }
+
+        getBatteryInfo() {
+            return this.battery.getEnergy()
+        }
+
+        turnOn() {
+            this.status = true;
+        }
+
+        turnOff() {
+            this.status = false;
+        }
+        light() {
+            if (this.status) {
+                alert("Lighting");
+            } else {
+                alert("Not lighting");
+            }
+        }
+    }
+
+    let battery = new Battery(); //đọc lại chỗ constructor
+    battery.setEnergy(50);
+    let flashlamp = new flashLamp();
+    flashlamp.setBattery(battery)
+    document.write('Battery info:' + flashlamp.getBatteryInfo() + '<br>')
+    flashlamp.light();//alert về status của light
+    document.write('Turn on<br>');
+    flashlamp.turnOn();
+    flashlamp.light();
+    document.write("Battery info: " + flashlamp.getBatteryInfo() + "<br>");
+
+
+    document.write('Turn off<br>');
+    flashlamp.turnOff();
+    flashlamp.light();
+
+</script>
+
+</body>
+</html>

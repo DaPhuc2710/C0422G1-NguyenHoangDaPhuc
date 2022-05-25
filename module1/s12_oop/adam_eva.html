@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple{
+        constructor(weight) {
+            this.weight=weight
+        }
+        setWeight(weight){
+            this.weight=weight
+        }
+        getWeight(){
+            return this.weight
+        }
+        decreaseWeight(){       // giảm đơn vị khi người ăn táo
+            this.weight--;
+            }
+        isEmpty(){
+            if(this.weight>0){return true}
+            else{return false}
+        }
+    }
+    class myHuman{
+        constructor(name,gender,weightH) {
+            this.name=name;
+            this.gender=gender;
+            this.weightH=weightH;
+        };
+            setName (name) {
+                this.name=name;
+            };
+            setGender(gender) {
+                this.gender=gender;
+            };
+            setWeightH () {
+                this.weightH=weightH;
+            };
+            getName(){
+                return this.name;
+            };
+            getGender(){
+            return this.gender;
+            };
+            getWeightH(){
+            return this.weightH;
+            }
+            speechWord(speech){
+                console.log(speech)
+            }
+                setApple(apple){
+                  this.apple=apple
+                }
+            eatApple(){
+                if(apple.isEmpty()>0){
+                    apple.decreaseWeight();
+                    this.weightH++;
+                }
+                else {alert('No apple left')}
+            }
+            checkAppleWeight(apple){
+                return apple.getWeight();
+            }
+
+    }
+    let apple=new Apple();
+    apple.setWeight(10);
+    let adam=new myHuman('Adam',true,65);
+    let eva=new myHuman('Eva',false,55);
+    do{
+        adam.setApple(apple)
+        adam.eatApple(apple)
+        document.write('Adam eat 1 unit apple:'+'<br>')
+        document.write('Weight of Apple:'+apple.getWeight()+'<br>')
+        document.write('Weight of Adam:'+adam.getWeightH()+'<br>')
+        document.write('<br>')
+        eva.setApple(apple)
+        adam.eatApple(apple)
+        document.write('Eva eat 1 unit:'+'<br>')
+        document.write('weight of Apple:'+apple.getWeight()+'<br>')
+        document.write('Weight of Eva:'+eva.getWeightH()+'<br>')
+        document.write('<br>')
+        }while (apple.getWeight()>0)
+
+
+
+</script>
+
+</body>
+</html>

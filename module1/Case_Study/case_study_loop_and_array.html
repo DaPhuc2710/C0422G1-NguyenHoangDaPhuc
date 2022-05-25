@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //  bai 1
+    // let a=prompt('nhập dộ dài mảng');
+    // let arr=[];
+    // let sum=0;
+    // let b=[];
+    // for (i=0;i<a;i++){
+    //     arr[i]=prompt('nhập các phần tử của mảng');
+    // } document.write(arr+'<br>')
+    // for (i=0;i<arr.length;i++){
+    //    sum=sum+parseInt(arr[i])
+    //     b[i]=sum
+    //     document.write( b+'<br>')
+    // }
+
+
+
+
+
+
+
+    let max=0;
+    let index = 0;
+    let a = prompt('nhập dộ dài mảng A');
+    let arrA = [];
+    for (i = 0; i < a; i++) {
+        arrA[i] = prompt('nhập các phần tử của tủ số');
+    }
+    document.write(arrA + '<br>')
+    let b = prompt('nhập dộ dài mảng B');
+    let arrB = [];
+    for (i = 0; i < b; i++) {
+        arrB[i] = prompt('nhập các phần tử của mẫu số');
+    }
+    document.write(arrB + '<br>')
+    for (j = 0; j < arrA.length; j++) {
+        max = arrA[j] / arrB[j];
+               index++
+        if (arrA[j+1] / arrB[j+1] > max) {
+            max == arrA[j+1] / arrB[j+1];
+               break;
+        }
+    }
+    document.write(max + 'là phân số lớn nhất'+ '' + 'tại vị trí ' + index)
+
+
+</script>
+
+
+</body>
+</html>
