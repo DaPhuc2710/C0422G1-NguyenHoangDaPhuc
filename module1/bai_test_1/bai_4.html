@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+class BankAcount{
+    constructor(acountId,ownerAcount,bank,totalMoney) {
+        this.acountId=acountId;
+        this.ownerAcount=ownerAcount;
+        this.bank=bank;
+        this.totalMoney=totalMoney;
+    }
+    setAcountId(){
+        this.acountId=acountId
+    }
+    setOwnerAcount(){
+        this.ownerAcount=ownerAcount
+    }setBank(){
+        this.bank=bank
+    }setTotalMoney(){
+        this.totalMoney=totalMoney
+    }gettAcountId(){
+         return this.acountId
+    }getOwnerAcount(){
+     return this.ownerAcount
+    }getBank(){
+         return  this.bank
+    }getTotalMoney() {
+        return this.totalMoney
+
+    }
+
+}
+let account= new BankAcount('2011','Nguyễn Hoàng Đa Phúc','Sacombank','120000000')
+
+document.write(account.gettAcountId()+'<br>')
+document.write(account.getBank()+'<br>')
+document.write(account.getOwnerAcount()+'<br>')
+document.write(account.getTotalMoney()+'<br>')
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<script>-->
+<!--    class DienThoai {-->
+<!--        constructor(ten, hangSX) {-->
+<!--            this.ten = ten;-->
+<!--            this.hangSX = hangSX;-->
+<!--        }-->
+
+<!--        full(){-->
+<!--            document.write(this.ten  + this.hangSX+ "<br>");-->
+<!--        }-->
+
+<!--        //getter - trả về giá trị thuộc tính-->
+<!--        getTen(){-->
+<!--            return this.ten;-->
+<!--        }-->
+
+
+<!--        //setter - cập nhật giá trị của thuộc tính-->
+<!--        setTen(tenMoi){-->
+<!--            this.ten = tenMoi;-->
+<!--        }-->
+
+<!--        dichuyen(){-->
+<!--            //do xang-->
+<!--            //xy hoa ki-->
+
+<!--            //==> chạy dc-->
+<!--        }-->
+<!--    }-->
+
+<!--    let iphone12 = new DienThoai("Iphone 12", "Apple");-->
+<!--    iphone12.full();-->
+<!--    // document.write(iphone12.ten + "<br>") //lấy trực tiếp-->
+<!--    document.write(iphone12.getTen() + "<br>") //Nên lấy gián tiếp-->
+<!--    /*Cập nhật tên*/-->
+<!--    // iphone12.ten = "Iphone ProMax";-->
+<!--    iphone12.setTen("Iphone Vip");-->
+<!--    document.write(iphone12.ten)-->
+
+
+<!--    // let samsungs22 = new DienThoai("Samsung s22", "Samsung");-->
+<!--    // samsungs22.goiDien();-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->

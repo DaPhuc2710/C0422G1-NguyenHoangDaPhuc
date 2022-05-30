@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length = prompt('nhập dộ dài của mảng')
+    let arr = []
+    for (let i = 0; i < length; i++) {
+        arr[i] = parseInt(prompt('nhập các phần tử của mảng'))
+    }
+    document.write('[' + arr + ']'+'<br>')
+
+
+    function xep(arr) {
+        let b = [];
+        let a = [0, 1];
+        let k = 1;
+        while (a[a.length - 1] < 1000) //giới hạn dãy bé hơn 1000
+        {
+            a.push(a[k - 1] + a[k])
+            k++
+        }
+        for (let j = 0; j < arr.length; j++) {
+            for (let l = 0; l < a.length; l++) {
+                if (arr[j] === a[l]) {
+                    b.push(arr[j])
+                }
+            }
+        }return b;
+    }
+    document.write('['+xep(arr.sort())+']')
+
+
+</script>
+
+</body>
+</html>

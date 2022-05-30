@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // bai adam and eva
+    // class Apple{
+    //     constructor(weight) {
+    //         this.weight=weight
+    //     }
+    //     getWeight () {
+    //         return this.weight
+    //     }
+    //     decreaseWeight (){
+    //         if (this.weight>0){
+    //         this.weight--;
+    //     }
+    //     }
+    //     isEmpty(){
+    //         if (this.weight==0){
+    //              return true
+    //         }else {
+    //              return  false
+    //         }
+    //     }
+    // }
+    // class Human{
+    //     constructor(name,gender,weight) {
+    //         this.name=name;
+    //         this.gender=gender;
+    //         this.weight=weight;
+    //     }
+    //     getName(){
+    //         return this.name;
+    //     }
+    //     getWeightH(){
+    //         return this.weight;
+    //     }
+    //     getGender(){
+    //         return this.gender;
+    //     }
+    //    isMale(){
+    //         if (this.gender=="Male"){
+    //             return true
+    //         }else {
+    //             return  false
+    //         }
+    //    }
+    //    say(content){
+    //         document.write(this.name+'say:'+content)
+    //    }
+    //    checkApple(apple){
+    //         return apple.isEmpty()  // gán apple cho lệnh is empty dể check
+    //    }
+    //    eat(apple){
+    //         if (apple.getWeight()>0){
+    //             this.weight++;
+    //             apple.decreaseWeight();
+    //         }
+    //    }
+    // }
+    //
+    //
+    // let apple=new Apple(10);
+    // let adam=new Human("Adam","Male",65)
+    // let eva=new Human("Eva","Female",45)
+    // document.write(apple.getWeight()+'<br>')
+    // while(apple.getWeight()>0){
+    //     adam.eat(apple)
+    //     eva.eat(apple)
+    //     document.write('Apple weight:'+apple.getWeight()+'<br>')
+    //     document.write('Adam weight:'+adam.getWeightH()+'<br>')
+    //     document.write('Eva weight:'+eva.getWeightH()+'<br>')
+    //     document.write('<br>')
+    // }
+
+    //
+    // class SwitchButton {
+    //     constructor(status) {
+    //         this.status = status;
+    //     }
+    //
+    //     connecToLamp(electricLamp) {
+    //         this.electricLamp = electricLamp;
+    //     }
+    //
+    //     switchOn() {
+    //         this.electricLamp.status = true
+    //     }
+    //
+    //     switchOff() {
+    //         this.electricLamp.status = false
+    //     }
+    // }
+    //
+    // class ElectricLamp {
+    //     constructor(status) {
+    //         this.status = status;
+    //     }
+    //
+    //     turnOn() {
+    //         this.status = true;
+    //     }
+    //
+    //     turnOff() {
+    //         this.status = false;
+    //     }
+    //
+    //     getStatus() {
+    //         return this.status;
+    //     }
+    // }
+    //
+    // let electricLamp = new ElectricLamp();
+    // let switchButton = new SwitchButton();
+    // switchButton.connecToLamp(electricLamp)// nhớ đưa ra connec thì mới nối được
+    // for (i = 0; i < 10; i++) {
+    //     switchButton.switchOn();
+    //     document.write(electricLamp.getStatus()+'<br>')// status vẫn được trong trường hợp này nhưng nên dùng getStatus vì sẽ tôn trọng đc quy tắc bao đóng
+    //     switchButton.switchOff();
+    //     document.write(electricLamp.getStatus()+'<br>')
+    //     document.write('<br>')
+    // }
+    // let text = "Hello world, welcome to the universe.";
+    // let result = text.indexOf("welcome");
+    // console.log(result)
+
+
+
+
+
+    // let a=prompt('nhap độ dài của mảng')
+    // let arr1=[]
+    // for(i=0;i<arr1;i++){
+    //     arr1[i]=prompt('nhập phần tử')
+    // }document.write(arr1)
+    // function iterArr(arr) {
+    //     var sum = 0;
+    //     //Your code here
+    //     for(i=0;i<arr.lenght;i++){
+    //         sum=sum+arr[i]
+    //         return sum;
+    // }
+    // } document.write(iterArr(arr1))
+
+
+
+
+
+    let a=prompt('nhap độ dài của mảng')
+    let arr1=[]
+    for(i=0;i<arr1;i++){
+        arr1[i]=parseInt(prompt('nhập phần tử'))
+    }document.write(arr1)
+    function findMax(arr) {
+        var max = arr[0];
+        //Your code here
+        for( let i=0;i<arr.length;i++){
+            if(max<arr[i]){
+                max=arr[i];
+            }
+        }
+        return max;
+    }
+    document.write(findMax(arr1))
+
+
+
+</script>
+
+</body>
+</html>

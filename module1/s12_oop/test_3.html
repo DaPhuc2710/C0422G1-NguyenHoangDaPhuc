@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    class Rat{
+        constructor(name,weight,speed,status) {
+            this.name=name;
+            this.weight=weight;
+            this.speed=speed;
+            this.status=status
+        }
+        getName(){
+            return this.name
+        }
+        getWeight(){
+            return this.weight
+        }
+        getSpeed(){
+            return this.speed
+        }
+        say(content){
+            console.log(this.name+'say'+content)
+        }
+        getStatus(){
+            if(this.status){
+               alert('Chuột sống')
+            }else {
+                alert('Chuột chết')
+            }
+        }
+        isAlive() {
+            return this.status = true
+        }
+        isDead(){
+            return this.status= false
+        }
+
+
+    }
+
+    class Tom{
+        constructor(name,weight,speed,) {
+            this.name=name
+            this.weight=weight
+            this.speed=speed
+        }
+        getWeightC(){
+            return this.weight
+        }getSpeed(){
+            return this.speed
+        }
+        say(content){
+            console.log(this.name+'say:'+content)
+        }
+        setRat(rat){
+            this.rat=rat
+        }
+        catchRat(){
+            if (this.speed>this.rat.speed){
+                alert('Mèo bắt được chuột')
+            }else {
+                alert('Mèo không bắt được chuột')
+            }
+        }
+        eatRat(){
+            if (this.speed<this.rat.speed){
+                alert('chuột chạy được ')}
+            else {
+                this.weight=this.weight+this.rat.weight;
+                alert('Mèo đã ăn hết chuột')
+            }
+        }
+    }
+    let jerry=new Rat('Jerry',30,50,true)
+    let tom=new Tom('Tom',30,1)
+    tom.setRat(jerry)
+    jerry.getStatus()
+    tom.catchRat();
+    tom.eatRat();
+    alert(tom.eatRat())
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // : Viết hàm có tham số truyền vào là một chuỗi các ký tự.Hàm thực hiện tạo ra một cụm từ viết tắt
+    // -	Nếu chuỗi có nhiều hơn hoặc bằng 2 từ trở lên thì hàm sẽ trả về 1 cụm từ viết tắt là lấy các ký tự đầu tiên của từng từ và đổi sang in hoa.
+    //     Ví dụ:   object     Oriented     programming => kết quả trả về :OOP
+    // -	Nếu Chuỗi chỉ có duy nhất 1 từ thì kết quả trả về là 1 thông báo "Chuỗi chỉ có 1 từ nên không cần viết tắc"
+    // -	    Ví du:   ObjectOriented => chuỗi này chỉ được tính chỉ có 1 từ
+    // Lưu ý : Các từ được xác định bởi 1 hoặc nhiều cách;
+
+   function chuanHOA(str) {
+       let arr = str.trim().split(' ')// xóa dấu cách ở 2 đầu(trim) và chuyển str thành mảng
+       let result = '';
+       let tmp;    // gán biến
+       if(arr.length <= 1){
+           alert('chuỗi có 1 từ mà viết tắt')
+       }else{
+       for (let i = 0 ; i < arr.length; i++){
+           tmp = arr[i].trim().toLowerCase()  ;
+           if (tmp !== ' '){
+               tmp = tmp.substr(0,1).toUpperCase() ; //substr nghĩa là trích xuất chuỗi
+                result += tmp
+
+           }
+       }document.write(result)
+   }
+   }
+   let str = prompt('nhập chuỗi')
+   chuanHOA(str)
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

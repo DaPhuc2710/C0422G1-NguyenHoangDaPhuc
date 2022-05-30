@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<script>
+    let str=prompt("nhap chu bat ky")
+    str.trim()
+    let str1 = str.toLowerCase()
+    let arr=str1.split('')
+
+
+    arr[0] = arr[0].toUpperCase()
+    for (let i = 0; i <arr.length ; i++) {
+        if (arr[i]==" " && arr[i+1]==" "){
+            arr.splice(i,1)
+        }
+        if (arr[i]!=" " && arr[i-1] == " "){
+            arr.splice(i,1,arr[i].toUpperCase())
+        }
+
+    }document.write(arr.join(''))
+ console.log(arr.join(''))
+</script>
+
+
+
+</body>
+</html>

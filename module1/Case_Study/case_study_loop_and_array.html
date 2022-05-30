@@ -6,49 +6,28 @@
 </head>
 <body>
 <script>
-    //  bai 1
-    // let a=prompt('nhập dộ dài mảng');
-    // let arr=[];
-    // let sum=0;
-    // let b=[];
-    // for (i=0;i<a;i++){
-    //     arr[i]=prompt('nhập các phần tử của mảng');
-    // } document.write(arr+'<br>')
-    // for (i=0;i<arr.length;i++){
-    //    sum=sum+parseInt(arr[i])
-    //     b[i]=sum
-    //     document.write( b+'<br>')
-    // }
-
-
-
-
-
-
-
-    let max=0;
-    let index = 0;
+    let max;
     let a = prompt('nhập dộ dài mảng A');
     let arrA = [];
-    for (i = 0; i < a; i++) {
+    for (let i = 0; i < a; i++) {
         arrA[i] = prompt('nhập các phần tử của tủ số');
     }
     document.write(arrA + '<br>')
     let b = prompt('nhập dộ dài mảng B');
     let arrB = [];
-    for (i = 0; i < b; i++) {
-        arrB[i] = prompt('nhập các phần tử của mẫu số');
+    for ( let k = 0; k < b; k++) {
+        arrB[k] = prompt('nhập các phần tử của mẫu số');
     }
     document.write(arrB + '<br>')
-    for (j = 0; j < arrA.length; j++) {
-        max = arrA[j] / arrB[j];
-               index++
-        if (arrA[j+1] / arrB[j+1] > max) {
-            max == arrA[j+1] / arrB[j+1];
-               break;
+    let c=0;
+    max = arrA[0] / arrB[0]
+    for ( let j = 1; j < arrA.length; j++) {
+        if (arrA[j] / arrB[j]>max) {
+            max = arrA[j] / arrB[j];
+                  c=j;
         }
     }
-    document.write(max + 'là phân số lớn nhất'+ '' + 'tại vị trí ' + index)
+    document.write(max + 'là phân số lớn nhất'+ '&nbsp' + 'tại vị trí ' + c)
 
 
 </script>

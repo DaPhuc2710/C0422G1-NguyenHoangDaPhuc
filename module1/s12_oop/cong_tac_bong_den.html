@@ -1,66 +1,113 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<script>-->
+
+<!--    class ElectricLamp{-->
+<!--        constructor(status) {-->
+<!--            this.status=status-->
+<!--        }-->
+<!--        setStatus(status){-->
+<!--            this.status=status-->
+<!--        }-->
+<!--        getStatus(){-->
+<!--            return this.status-->
+<!--        }-->
+
+<!--    }-->
+<!--    class SwitchButton{-->
+<!--        constructor(status,lamp) {-->
+<!--            this.status=status;-->
+<!--            this.lamp=lamp-->
+<!--        }-->
+
+
+<!--        setLamp(lamp){-->
+<!--            this.lamp=lamp-->
+<!--        }-->
+
+
+<!--        getLamp(){-->
+<!--            return this.lamp;-->
+<!--        }-->
+<!--        connectToLamp(ElectricLamp){-->
+<!--            this.lamp=ElectricLamp-->
+<!--        }-->
+<!--        switchOff(){-->
+<!--            this.lamp.status = false;-->
+<!--            return this.status = false;-->
+<!--        }-->
+
+<!--        switchOn(){-->
+<!--            this.lamp.status = true;-->
+<!--            return this.status = true;-->
+<!--        }-->
+
+<!--    }-->
+<!--    let electriclamp= new ElectricLamp(false)-->
+<!--    let switchbutton=new SwitchButton(electriclamp,false)-->
+<!--    console.log(switchbutton.switchOn());-->
+<!--    console.log(electriclamp.getStatus());-->
+<!--    console.log(switchbutton.switchOff());-->
+<!--    console.log(electriclamp.getStatus());-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Công tắc và bóng đèn</title>
 </head>
 <body>
 <script>
-
-    class ElectricLamp{
-        constructor(status) {
-            this.status=status
-        }
-        setStatus(status){
-            this.status=status
-        }
-        getStatus(){
-            return this.status
-        }
-
-    }
     class SwitchButton{
-        constructor(status,lamp) {
-            this.status=status;
-            this.lamp=lamp
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
         }
-
-
-        setLamp(lamp){
-            this.lamp=lamp
+        connecToLamp(electricLamp){
+            this.electricLamp = electricLamp;
         }
-
-
-        getLamp(){
-            return this.lamp;
-        }
-        connectToLamp(ElectricLamp){
-            this.lamp=ElectricLamp
+        switchOn(){
+            this.electricLamp.status = true;// status ở đây đã được khai báo trên this.status
+                                             // this.electricLamp đã được khai báo trên dòng 71-> rồi từ đó chạy lên lại dòng 70
         }
         switchOff(){
-            this.lamp.status = false;
-            return this.status = false;
+            this.electricLamp.status = false;
         }
-
-        switchOn(){
-            this.lamp.status = true;
-            return this.status = true;
-        }
-
     }
-    let electriclamp= new ElectricLamp(false)
-    let switchbutton=new SwitchButton(electriclamp,false)
-    console.log(switchbutton.switchOn());
-    console.log(electriclamp.getStatus());
-    console.log(switchbutton.switchOff());
-    console.log(electriclamp.getStatus());
-
-
-
-
-
-
+    class ElectricLamp{
+        constructor(status) {
+            this.status = status;
+        }
+        turnOn(){
+            this.status = true;
+        }
+        turnOff(){
+            this.status = false;
+        }
+        getStatus(){
+            return this.status;
+        }
+    }
+    let switchbutton = new SwitchButton();
+    let electriclamp = new ElectricLamp();
+    switchbutton.connecToLamp(electriclamp);
+    for (let i = 0; i < 10; i++) {
+        switchbutton.switchOn();
+        document.write(electriclamp.status+'<br>');
+        switchbutton.switchOff();
+        document.write(electriclamp.status+'<br>');
+        document.write('<br>');
+    }
 </script>
-
 </body>
 </html>
+
+
+
+
+
+
